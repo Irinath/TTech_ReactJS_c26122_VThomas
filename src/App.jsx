@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes } from 'react-router-dom';
-import { Header } from "./components/Header";
-import { Footer } from "./components/Footer";
+import { Header } from "./components/Header/Header";
+import { Footer } from "./components/Footer/Footer";
 import './App.css';
 
 import {ItemListContainer} from "./components/ItemListContainer";
@@ -16,6 +16,7 @@ function App() {
     <Route path="/carrito" elemente={<h1>"Carrito"</h1>} /> 
         </Routes>
 </main>
+<Footer/>
 
     </>
   )
