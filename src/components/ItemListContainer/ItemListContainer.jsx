@@ -11,6 +11,7 @@ export const ItemListContainer = () => {
     fetch("/data/products.json")
       .then((res) => res.json())
       .then((data) => setProducts(data))
+      // para firebase - import { getProducts } from "../../services/productsService"; 
       .catch((err) => console.log(err))
       .finally(() => {
         setLoading(false);

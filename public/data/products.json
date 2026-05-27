@@ -1,37 +1,37 @@
 [
     {
         "id": 1,
-        "name": "Nombre del producto 1",
-        "description": "Descripción del producto 1",
+        "name": "Marcador Resaltador Pastel",
+        "description": "Marcador Resaltador Pastel colores varios Trabi",
         "price": 12500,
-        "image": "/img/imagen.jpg" 
+        "image": "https://ibb.co/VW3tjjmd" 
     },
     {
         "id": 2,
-        "name": "Nombre del producto 2",
-        "description": "Descripción del producto 2",
-        "price": 12500,
-        "image": "/img/imagen.jpg" 
+        "name": "Enfócate",
+        "description": "Enfócate - Cal Newport",
+        "price": 25000,
+        "image": "https://ibb.co/TDDc4ny8" 
     },
     {
         "id": 3,
-        "name": "Nombre del producto 3",
-        "description": "Descripción del producto 3",
-        "price": 12500,
-        "image": "/img/imagen.jpg" 
+        "name": "Hábitos Átomicos",
+        "description": "Hábitos Átomicos - James Clear",
+        "price": 22500,
+        "image": "https://ibb.co/Hpp9Fs9J" 
     },
     {
         "id": 4,
-        "name": "Nombre del producto 4",
-        "description": "Descripción del producto 4",
-        "price": 12500,
-        "image": "/img/imagen.jpg" 
+        "name": "7 Hábitos...",
+        "description": "7 Hábitos de la Gente Altamente Efectiva - Stephen R. Covey ",
+        "price": 27200,
+        "image": "https://ibb.co/VYD8QJkb" 
     },
     {
         "id": 5,
-        "name": "Nombre del producto 5",
-        "description": "Descripción del producto 5",
-        "price": 12500,
-        "image": "/img/imagen.jpg" 
+        "name": "PostIt varios",
+        "description": "PostIt Pegatinas Colores variados",
+        "price": 7800,
+        "image": "https://ibb.co/dh2rS9v" 
     }
 ]
