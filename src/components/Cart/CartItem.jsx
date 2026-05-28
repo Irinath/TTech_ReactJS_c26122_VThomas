@@ -1,16 +1,14 @@
-export const CartView = () => {
-const {cart} = useCart()
-return  <section>
-    <h1>Tu carrito de compra (insertar ícono)</h1>
+import { useCart } from "../../context/CartContext";
+import { Item } from "../Item/Item";
 
-    {cart.lenght (
-    <>
-    <CartList/>
-    <CartSummery/>
-    </>
-    ):(
+export const CartItem = ({ item }) => {
+    const { removeItem } = useCart();
 
-    )
-    }
-</section>
+    return(
+        <Item {...item}>
+            <button
+            className="btn bg-delete primary"
+            onClick={() => removeItem(item.id)}> Eliminar </button>
+        </Item>
+    );
 };
