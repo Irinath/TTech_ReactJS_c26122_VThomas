@@ -7,10 +7,10 @@ export const Header = () => {
   return (
     <header>
       <div className="logo-container">
-        <link to={"/"}>
+        <Link to={"/"}>
           <img src={logo} alt="logo React" />
-          <span>Reactiva</span>
-        </link>
+          <span>C26122</span>
+        </Link>
       </div>
       <Nav />
     </header>

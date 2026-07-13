@@ -1,27 +1,31 @@
-import React from 'react';
-import { Routes } from 'react-router-dom';
+import { Route, Routes } from "react-router-dom";
 import { Header } from "./components/Header/Header";
-import { Footer } from "./components/Footer/Footer";
+import { Footer } from "../src/components/Footer/Footer";
+import { Count } from "./components/Count/Count";
 import { ItemListContainer } from "./components/ItemListContainer/ItemListContainer";
-import './App.css';
-import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer';
+import "./App.css";
+import { ItemDetailContainer } from "./components/ItemDetailContainer/ItemDetailContainer";
 
-function App() {  
+function App() {
   return (
     <>
-<Header/>
-<main>
-  <Routes>
-    <Route path="/" element={<ItemListContainer/>}/>
-    <Route path="/products/:id" element={<ItemDetailContainer/>}/>
-    <Route path="/carrito" elemente={<h1>"Carrito"</h1>} /> 
-    {/*Ruta opcional para categoria */};
+      <Header />
+      <main>
+        <Routes>
+          <Route path="/" element={<ItemListContainer />} />
+          <Route path="/products/:id" element={<ItemDetailContainer />} />
+          <Route path="/carrito" element={<CartView />} />
+          {/*Ruta opcional para categoria */};
+          <Route path="/admin" element={<h1>ADMIN</h1>} />
+          <Route
+            path="/success/:id"
+            element={<h1>Producto cargado correctamente</h1>}
+          />
         </Routes>
-</main>
-<Footer/>
-
+      </main>
+      <Footer />
     </>
   );
-};
+}
 
-export default App
+export default App;

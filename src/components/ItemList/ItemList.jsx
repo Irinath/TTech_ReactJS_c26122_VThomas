@@ -1,22 +1,21 @@
 import { Link } from "react-router-dom";
 import "./ItemList.css";
-import { Item } from "../Item/Item"
+import { Item } from "../Item/Item";
 
 export const ItemList = ({ products }) => {
-console.log("Products de itemlist");
+  //console.log("Products de itemlist");
 
-if(!products.length) {
+  if (!products.length) {
     return <p>No hay productos en la Lista</p>;
-}
+  }
 
-
-return (
+  return (
     <div className="products-container">
-        {products.map((product) => {
-            <Link to={`/product/${product.id}`} key={product.id}>
-                <Item {...product}/>
-            </Link>
-        })}
+      {products.map((product) => (
+        <Link to={`/product/${product.id}`} key={product.id}>
+          <Item {...product} />
+        </Link>
+      ))}
     </div>
-);
+  );
 };

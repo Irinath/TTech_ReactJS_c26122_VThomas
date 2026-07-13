@@ -1,21 +1,27 @@
 import { createContext, useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-// Creamos contexto
+/* -------------------------------------------------------------------------- */
+/*                              CREAMOS CONTEXTO                              */
+/* -------------------------------------------------------------------------- */
 const CartContext = createContext();
 
-//Inicializamos Customs Hooks
+/* -------------------------------------------------------------------------- */
+/*                                 CUSTOM HOOK                                */
+/* -------------------------------------------------------------------------- */
 export const useCart = () => {
   const context = useContext(CartContext);
 
   if (!context) {
-    throw new Error("useCart debe usarse dentro de un CartProvider");
+    throw new Error("useCart debe usarse dentro de CartProvider");
+    
   }
-
   return context;
 };
 
-//Proveedor
+/* -------------------------------------------------------------------------- */
+/*                                  PROVEEDOR                                 */
+/* -------------------------------------------------------------------------- */
 export const CartProvider = ({ children }) => {
   const navigate = useNavigate();
   const [cart, setCart] = useState([]);
@@ -50,7 +56,7 @@ export const CartProvider = ({ children }) => {
     setCart([]);
   };
 
-  //Total de items en carrito (para este caso sin quantity) --> Ver que opción hago
+  //Total de items en carrito (para este caso sin quantity)
   const getTotalItems = () => {
     return cart.length;
   };
