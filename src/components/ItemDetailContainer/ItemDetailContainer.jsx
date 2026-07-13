@@ -1,4 +1,3 @@
-import { AliasedAggregate } from "firebase/firestore/pipelines";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { ItemDetail } from "../ItemDetail/ItemDetail";
@@ -14,7 +13,7 @@ export const ItemDetailContainer = () => {
     getProductById(id)
     .then((data) => setItemDetail(data))
     .catch((err) => console.log(err))
-    .fanally(() => setLoading(false));
+    .finally(() => setLoading(false));
   }, [id]);
 
   if (loading) return <p>Cargando...</p>;

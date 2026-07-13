@@ -3,7 +3,7 @@ import { Header } from "./components/Header/Header";
 import { Footer } from "../src/components/Footer/Footer";
 import { Count } from "./components/Count/Count";
 import { ItemListContainer } from "./components/ItemListContainer/ItemListContainer";
-import { CartView } from "./components/Cart/CartView"
+import { CartView } from "./components/Cart/CartView";
 import "./App.css";
 import { ItemDetailContainer } from "./components/ItemDetailContainer/ItemDetailContainer";
 import { ProductSuccess } from "./components/adminComponents/ProductSuccess";
