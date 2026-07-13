@@ -3,8 +3,11 @@ import { Header } from "./components/Header/Header";
 import { Footer } from "../src/components/Footer/Footer";
 import { Count } from "./components/Count/Count";
 import { ItemListContainer } from "./components/ItemListContainer/ItemListContainer";
+import { CartView } from "./components/Cart/CartView"
 import "./App.css";
 import { ItemDetailContainer } from "./components/ItemDetailContainer/ItemDetailContainer";
+import { ProductSuccess } from "./components/adminComponents/ProductSuccess";
+import { ProductFormContainer } from "./components/adminComponents/ProductFormContainer";
 
 function App() {
   return (
@@ -16,10 +19,10 @@ function App() {
           <Route path="/products/:id" element={<ItemDetailContainer />} />
           <Route path="/carrito" element={<CartView />} />
           {/*Ruta opcional para categoria */};
-          <Route path="/admin" element={<h1>ADMIN</h1>} />
+          <Route path="/admin" element={<ProductFormContainer />} />
           <Route
             path="/success/:id"
-            element={<h1>Producto cargado correctamente</h1>}
+            element={<ProductSuccess/>}
           />
         </Routes>
       </main>

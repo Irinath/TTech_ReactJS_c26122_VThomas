@@ -20,7 +20,8 @@ export const CartView = () => {
                 <>
                 <p className="empty-cart"> EL CARRITO ESTÁ VACÍO.</p>
                 <Link className="btn primary bg-primary" to={"/"}>
-                VOLVER</Link>
+                VOLVER
+                </Link>
                 </>
             )}
         </section>
