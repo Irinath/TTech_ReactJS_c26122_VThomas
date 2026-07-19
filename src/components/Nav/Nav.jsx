@@ -12,6 +12,9 @@ export const Nav = () => {
         <li>
           <Link to={"/"}>Home</Link>
         </li>
+        <li><Link to={"/category/libros"}>Libros</Link></li>
+        <li><Link to={"/category/cables"}>Cables</Link></li>
+        <li><Link to={"/category/libreria"}>Libreria</Link></li>
         <li>
           <Link to={"/carrito"}>Carrito
           {totalItems > 0 && <span className="incart">{totalItems}</span>}

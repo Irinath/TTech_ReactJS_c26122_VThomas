@@ -16,6 +16,7 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<ItemListContainer />} />
+          <Route path="/category/:category" element={<ItemListContainer />} />
           <Route path="/products/:id" element={<ItemDetailContainer />} />
           <Route path="/carrito" element={<CartView />} />
           {/*Ruta opcional para categoria */};

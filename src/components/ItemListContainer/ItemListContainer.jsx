@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { ItemList } from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
+import { getByCategory } from "../../services/productsService";
 
 
 export const ItemListContainer = () => {
@@ -9,15 +10,16 @@ export const ItemListContainer = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    //setLoading();
+    //setLoading(true);
 
-    fetch("/data/products.json")
-      .then((res) => res.json())
+    // para firebase - import { getProducts } from "../../services/productsService"; 
+    //getProducts() === si no utilizo categorías ====
+    getByCategory(category)
       .then((data) => setProducts(data))
-      // para firebase - import { getProducts } from "../../services/productsService"; 
       .catch((err) => console.log("Hubo un error:", err))
       .finally(() => setLoading(false));
-  }, [category]);
+  }, [category]); 
+  //en el array hay que devolver la catagoria "category" para filtrar por categoría
 
   if (loading) return <p>Cargando...</p>;
   //if (err) return <p>Error al cargar el componente</p>;

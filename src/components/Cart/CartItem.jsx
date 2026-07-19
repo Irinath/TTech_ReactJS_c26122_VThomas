@@ -8,7 +8,9 @@ export const CartItem = ({ item }) => {
         <Item {...item}>
             <button
             className="btn bg-delete primary"
-            onClick={() => removeItem(item.id)}> Eliminar </button>
+            onClick={() => removeItem(item.id)}> 
+            Eliminar  
+            </button>
         </Item>
     );
 };
