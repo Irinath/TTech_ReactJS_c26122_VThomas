@@ -123,10 +123,11 @@
 
 .btn-submit:hover {
   background-color: #1d4ed8;
+  box-shadow: 0px 4px 6px #7193f1;
 }
 
 .btn-submit:active {
-  transform: scale(0.98);
+  transform: scale(1.1);
 }
 .error-message {
   color: #dc2626;

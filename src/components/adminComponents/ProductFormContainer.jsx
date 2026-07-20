@@ -19,6 +19,7 @@ export const ProductFormContainer = () => {
         description:"",
     });
 
+    //maneja estado de cambios de productos
     const handleChange = (e) =>{
         const { name, value } = e.target;
         setProduct({...product, [name]:value });
@@ -35,6 +36,7 @@ export const ProductFormContainer = () => {
         setErrors({});
         setLoading(true);
 
+        //validar producto
         const newErrors = validateProduct({...product, file});
         if (Object.keys(newErrors).length > 0) {
             setErrors(newErrors);
@@ -43,16 +45,20 @@ export const ProductFormContainer = () => {
         }
 
         try {
+            //subir imagen a imbb
             const imageUrl = await uploadImage(file);
 
+            //armar datos del producto para subir a la BD
             const productData = {
                 ...product,
                 price: Number(product.price),
                 image: imageUrl,
             };
 
+            //alta de producto
             const id = await createProduct(productData);
-            //Limpiamos los estados
+            
+            //Limpiamos los estados para vaciar formulario
             setProduct({ 
                 name: "",
                 price: "",
