@@ -11,11 +11,13 @@ import { ProductFormContainer } from "./components/adminComponents/ProductFormCo
 import { PublicLayout } from "./layouts/PublicLayout";
 import { AdminLayout } from "./layouts/AdminLayout";
 import { Dashboard } from "./components/adminComponents/Dashboard/Dashboard";
+import { ProtectedRoute } from "./components/ProtectedRoutes/ProtectedRoutes";
+import { Login } from "./components/Login/Login";
 
 function App() {
   return (
     <>
-      <Header />
+      
       <main>
         <Routes>
           {/* ====================== RUTAS PÚBLICAS ======================= */}
@@ -27,9 +29,13 @@ function App() {
             <Route path="/carrito" element={<CartView />} />
           </Route>
 
-          <Route path="/admin/login" element={<login />} />
+          <Route path="/admin/login" element={<Login />} />
           {/* ====================== RUTAS ADMINISTRADOR ======================= */}
-          <Route path="/admin" element={<AdminLayout />}>
+          <Route path="/admin" element={
+            <ProtectedRoute>
+              <AdminLayout />
+            </ProtectedRoute>
+          }>
 
             <Route index element={<Navigate to={"dashboard"} />} />
             <Route path="dashboard" element={<Dashboard />} />
@@ -39,7 +45,7 @@ function App() {
           </Route>
         </Routes>
       </main>
-      <Footer />
+      
     </>
   );
 }
